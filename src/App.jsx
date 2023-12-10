@@ -1,5 +1,5 @@
 import React from "react";
-import './app.css'
+import './App.css'
 //The use of Class Component is intended, and used just for educational purposes 
 class App extends React.Component{
   constructor(props){
