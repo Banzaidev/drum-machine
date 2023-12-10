@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    font-family: 'VT323', monospace;
+}
+
+#drum-machine{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+#title{
+    text-align: center;
+    font-weight: 100;
+    font-size: 65px;
+    position: relative;
+    top: -17vh;
+}
+h3{
+    margin-top: 10px;
+}
+h3, a{
+    font-family: 100;
+}
+
+a:link{
+    color: #1a447b;
+
+}
+a:visited{
+    color: #335989;
+    
+}
+#drum-pads{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto auto auto;
+    gap: 3px;
+
+}
+
+#pads-display, #display{
+    border-color: black;
+    border-width: 1px;
+    border-style: dashed;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+
+#pads-display{
+    display: flex;
+    flex-direction: row;
+    
+}
+#display{
+    align-self: center;
+    margin-left: 20px;
+    font-size: 20px;
+
+}
+.drum-pad{
+    border: none;
+    width: 100px;
+    height: 100px;
+    color: white;
+    font-size: xx-large;
+    border-radius: 15px;
+
+    background-color: #002f6c;
+}
+
+.drum-pad:hover{
+    cursor: pointer;
+}
+.drum-pad:hover, .click{
+    background-color: #001c41;
+    scale: 102%;
+}
+@media screen and (max-width: 767px)   {
+    #pads-display{
+        flex-direction: column;
+    }
+    #display{
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #title{
+        top: -12vh;
+    }
+
+    
+}
