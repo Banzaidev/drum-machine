@@ -11,6 +11,7 @@ class App extends React.Component{
 
     this.handleKeyPress = this.handleKeyPress.bind(this)
     this.handleClick = this.handleClick.bind(this)
+    //this.playSound = this.playSound.bind(this) To get all test done 
 
   }
 
@@ -32,6 +33,7 @@ class App extends React.Component{
     
 
   }
+
   handleKeyPress(event){
     const keyPressedDrumPad = Object.values(event.target.getElementsByClassName('drum-pad')).filter((drumPad) => drumPad.value == event.key.toUpperCase())[0]
     if(event.key == 'Tab'){
@@ -41,8 +43,31 @@ class App extends React.Component{
       this.playAudioKeyPress(keyPressedDrumPad)
     }
     
+    //this.playSound(event.key.toUpperCase()) To get all test done 
   }
 
+
+  /* 
+  //To get all test done 
+
+  playSound = (key)=>{
+    const audio = document.getElementById(key)
+    const parentButton = audio.parentElement
+
+    const playPromise = audio.play()
+    if(playPromise != undefined){
+      playPromise.then((_) => {
+        audio.currentTime = 0;
+        this.setState({displayName: parentButton.id})
+        parentButton.classList.add('click')
+      }).catch((error) => {
+        console.log(error)
+      })
+    }
+    
+  } 
+  
+  */
   
   playAudioKeyPress(keyPressed){
     const audio = new Audio(keyPressed.children[0].src)
@@ -58,7 +83,7 @@ class App extends React.Component{
       })
     }
 
-  }
+  } 
 
   handleClick(event){
     const audio = event.target.children[0]
